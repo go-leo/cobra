@@ -1,4 +1,4 @@
-module github.com/go-leo/leo-cobra
+module github.com/go-leo/cobra
 
 go 1.18
 

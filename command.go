@@ -1,4 +1,4 @@
-package leo_cobra
+package cobra
 
 import (
 	"context"
@@ -7,19 +7,19 @@ import (
 	"github.com/spf13/cobra"
 )
 
-type CLI struct {
+type Cobra struct {
 	rootCmd *cobra.Command
 }
 
-func New(rootCmd *cobra.Command) *CLI {
-	return &CLI{rootCmd: rootCmd}
+func New(rootCmd *cobra.Command) *Cobra {
+	return &Cobra{rootCmd: rootCmd}
 }
 
-func (c *CLI) String() string {
-	return "Cobra CLI App"
+func (c *Cobra) String() string {
+	return "Cobra App"
 }
 
-func (c *CLI) Invoke(ctx context.Context) error {
+func (c *Cobra) Invoke(ctx context.Context) error {
 	if c.rootCmd == nil {
 		return errors.New("root command is nil")
 	}
